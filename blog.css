@@ -1,0 +1,219 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0f7fa, #f8bbd0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.category-selection {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.category-selection label {
+    font-size: 1rem;
+}
+
+.category-selection select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 40%;
+    justify-content: center;  
+}
+
+.task-input input,
+.task-input textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-input button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; 
+}
+
+.task-input button:hover {
+    background-color:transparent;
+    color: purple;
+    border: 2px solid purple;
+    
+}
+
+.category-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 35%;
+    background-color:white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color:black;
+    height: 100px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button i {
+    font-size: 18px;
+}
+
+button:hover {
+    color: #4CAF50;
+}
+
+button i.fa-edit {
+    color: #4CAF50;
+}
+
+button i.fa-trash {
+    color: #f44336;
+}
+
+.task-list {
+    display: none;
+}
+
+.task-list.active {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    body {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      height: auto;
+      padding: 20px 10px;
+      overflow-x: hidden;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+  
+    .category-selection {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .task-input {
+      width: 100%;
+    }
+  
+    .task-input input,
+    .task-input textarea {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .task-input button {
+      width: 100%;
+    }
+  
+    .category-cards {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .card {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card ul li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+  }
+  
